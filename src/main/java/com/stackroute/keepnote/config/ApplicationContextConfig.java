@@ -55,30 +55,31 @@ public class ApplicationContextConfig {
 	 * dataSource.setUsername(System.getenv("MYSQL_USER"));
 	 * dataSource.setPassword(System.getenv("MYSQL_PASSWORD"));
 	 */
+
+	@Bean
+
+	public DataSource dataSource() {
+		DriverManagerDataSource dataSource = new DriverManagerDataSource();
+		dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+		dataSource.setUrl("jdbc:mysql://" + System.getenv("MYSQL_HOST") + ":3306/" + System.getenv("MYSQL_DATABASE")
+				+ "?verifyServerCertificate=false&useSSL=false&requireSSL=false");
+		dataSource.setUsername(System.getenv("MYSQL_USER"));
+		dataSource.setPassword(System.getenv("MYSQL_PASSWORD"));
+		return dataSource;
+	}
+
 	/*
-	 * @Bean
+	 * @Bean public DataSource dataSource() { DriverManagerDataSource dataSource =
+	 * new DriverManagerDataSource();
+	 * dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver"); dataSource
+	 * .setUrl(
+	 * "jdbc:mysql://localhost:3306/test?verifyServerCertificate=false&useSSL=false&requireSSL=false"
+	 * ); dataSource.setUsername("root"); dataSource.setPassword("GayatriMata1@.");
+	 * return dataSource;
 	 * 
-	 * public DataSource dataSource() { DriverManagerDataSource dataSource = new
-	 * DriverManagerDataSource();
-	 * dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-	 * dataSource.setUrl("jdbc:mysql://" + System.getenv("MYSQL_HOST") + ":3306/" +
-	 * System.getenv("MYSQL_DATABASE") +
-	 * "?verifyServerCertificate=false&useSSL=false&requireSSL=false");
-	 * dataSource.setUsername(System.getenv("MYSQL_USER"));
-	 * dataSource.setPassword(System.getenv("MYSQL_PASSWORD")); return dataSource; }
+	 * }
 	 */
 
-	
-	  @Bean public DataSource dataSource() { DriverManagerDataSource dataSource =
-	  new DriverManagerDataSource();
-	  dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver"); dataSource
-	  .setUrl(
-	  "jdbc:mysql://localhost:3306/test?verifyServerCertificate=false&useSSL=false&requireSSL=false"
-	  ); dataSource.setUsername("root"); dataSource.setPassword("GayatriMata1@.");
-	  return dataSource;
-	  
-	  }
-	 
 	/*
 	 * create a getter for Hibernate properties here we have to mention 1. show_sql
 	 * 2. Dialect 3. hbm2ddl
