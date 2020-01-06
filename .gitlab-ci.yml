@@ -1,5 +1,5 @@
 services:
-  - 'mysql:8.0'
+  - 'mysql:5.7'
 variables:
   MYSQL_HOST: localhost
   MYSQL_DATABASE: test
