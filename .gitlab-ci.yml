@@ -2,7 +2,7 @@ services:
   - 'mysql:8.0'
 variables:
   MYSQL_HOST: localhost
-  MYSQL_DATABASE: NoteDB
+  MYSQL_DATABASE: test
   MYSQL_CI_URL: jdbc:mysql://${MYSQL_HOST}/${MYSQL_DATABASE}?verifyServerCertificate=false&requireSSL=false
   MYSQL_ROOT_PASSWORD: GayatriMata1@.
 image: "maven:3.5.2-jdk-8"
