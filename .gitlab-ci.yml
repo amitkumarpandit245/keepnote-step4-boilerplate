@@ -3,7 +3,7 @@ services:
 variables:
   MYSQL_HOST: localhost
   MYSQL_DATABASE: test
-  MYSQL_CI_URL: jdbc:mysql://${MYSQL_HOST}/${MYSQL_DATABASE}??verifyServerCertificate=false&useSSL=false&requireSSL=false
+  MYSQL_CI_URL: jdbc:mysql://${MYSQL_HOST}/${MYSQL_DATABASE}
   MYSQL_ROOT_PASSWORD: GayatriMata1@.
 image: "maven:3.5.2-jdk-8"
 maven-test:
