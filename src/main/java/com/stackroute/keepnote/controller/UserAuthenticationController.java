@@ -35,7 +35,7 @@ public class UserAuthenticationController {
 	 */
 	@Autowired
 	UserService userService;
-
+	@Autowired
 	public UserAuthenticationController(UserService userService) {
 		this.userService = userService;
 	}

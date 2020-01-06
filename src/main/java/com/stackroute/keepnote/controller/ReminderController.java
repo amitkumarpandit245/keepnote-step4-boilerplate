@@ -50,7 +50,7 @@ public class ReminderController {
 	 */
 	@Autowired
 	ReminderService reminderService;
-
+	@Autowired
 	public ReminderController(ReminderService reminderService) {
 		this.reminderService = reminderService;
 	}

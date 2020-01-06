@@ -39,7 +39,7 @@ public class NoteController {
 	 */
 	@Autowired
 	NoteService noteService;
-
+	@Autowired
 	public NoteController(NoteService noteService) {
 		this.noteService = noteService;
 	}

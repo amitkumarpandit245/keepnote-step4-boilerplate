@@ -36,7 +36,7 @@ public class CategoryController {
 	 */
 	@Autowired
 	CategoryService categoryService;
-
+	@Autowired
 	public CategoryController(CategoryService categoryService) {
 		this.categoryService = categoryService;
 	}
