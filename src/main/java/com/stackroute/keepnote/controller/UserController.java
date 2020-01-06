@@ -34,7 +34,6 @@ public class UserController {
 	 * autowiring) Please note that we should not create an object using the new
 	 * keyword
 	 */
-	@Autowired
 	UserService userService;
 	@Autowired
 	public UserController(UserService userService) {

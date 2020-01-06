@@ -48,7 +48,6 @@ public class ReminderController {
 	 * Constructor-based autowiring) Please note that we should not create any
 	 * object using the new keyword
 	 */
-	@Autowired
 	ReminderService reminderService;
 	@Autowired
 	public ReminderController(ReminderService reminderService) {

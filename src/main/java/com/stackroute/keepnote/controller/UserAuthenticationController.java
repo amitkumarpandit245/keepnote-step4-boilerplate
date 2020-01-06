@@ -33,7 +33,6 @@ public class UserAuthenticationController {
 	 * autowiring) Please note that we should not create any object using the new
 	 * keyword
 	 */
-	@Autowired
 	UserService userService;
 	@Autowired
 	public UserAuthenticationController(UserService userService) {

@@ -34,7 +34,6 @@ public class CategoryController {
 	 * Constructor-based autowiring) Please note that we should not create any
 	 * object using the new keyword
 	 */
-	@Autowired
 	CategoryService categoryService;
 	@Autowired
 	public CategoryController(CategoryService categoryService) {

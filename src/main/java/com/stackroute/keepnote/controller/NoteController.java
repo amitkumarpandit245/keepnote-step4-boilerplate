@@ -37,7 +37,6 @@ public class NoteController {
 	 * autowiring) Please note that we should not create any object using the new
 	 * keyword
 	 */
-	@Autowired
 	NoteService noteService;
 	@Autowired
 	public NoteController(NoteService noteService) {
