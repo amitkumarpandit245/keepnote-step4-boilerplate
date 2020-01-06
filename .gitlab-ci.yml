@@ -14,4 +14,3 @@ maven-test:
            stage: test
 stages:
        - test
-       - build
